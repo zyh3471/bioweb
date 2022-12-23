@@ -1,0 +1,148 @@
+/* 下方影响整个body全局，前面不用加“.” */
+body {
+	margin: 0;
+	height: 100vh;
+	/* vh是一个视窗的长度单位，就是不滚动时刚好沾满屏幕的长度 */
+	background-color: #eee;
+}
+
+/* 下方是所有元素的边框，可以查下“*”的用法  */
+/* * {
+  border: 1px solid black;
+} */
+
+.flex {
+	display: flex;
+}
+
+.column {
+	flex-direction: column;
+}
+.top {
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(206, 206, 206);
+	width: 100%;
+	padding: 8px;
+}
+
+.yuan {
+	border-radius: 100%;
+	overflow: hidden;
+	width: 100px;
+	height: 100px;
+}
+
+.yidong {
+	transform: translate(-100px, -50px);
+}
+
+.mid {
+	align-items: center;
+	max-width: 700px;
+	margin: 30px auto;
+	flex: auto;
+}
+
+.down {
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(206, 206, 206);
+	width: 100%;
+	padding: 8px;
+}
+
+.dianzan {
+	border-top: 0.5px solid black;
+	border-width: 1px;
+	display: flex;
+	margin: 50px;
+}
+
+hr {
+	margin: 30px auto;
+	border: auto;
+	border-style: inset;
+	border-width: 1px;
+}
+
+.article {
+	max-width: 700px;
+	margin: 30px auto;
+	padding: 15px;
+	color: rgb(36, 41, 46);
+	font-size: 17px;
+	line-height: 1.7;
+	text-size-adjust: 100%;
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+.jishu {
+	text-align: center;
+	padding: 0px 5px;
+	display: flex;
+	border: solid rgb(246, 101, 125) 2px;
+	border-radius: 0.3em;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-content: center;
+	letter-spacing: 0px;
+}
+.jishuqi {
+	align-self: center;
+	font-size: 15px;
+	margin: auto 0px auto 5px;
+}
+
+.button {
+	border: 0px none;
+	padding: 0px;
+	margin: 0 0 0;
+	align-self: flex-end;
+}
+@keyframes sheen {
+	0% {
+		transform: skewY(-45deg) translateX(0);
+	}
+	100% {
+		transform: skewY(-45deg) translateX(12.5em);
+	}
+}
+.button {
+	/* padding: 0.75em 2em; */
+	/* text-align: center; */
+	/* text-decoration: none; */
+	/* color: #2194e0; */
+	/* border: 2px solid #2194e0; */
+	/* font-size: 24px; */
+	/* display: inline-block; */
+	border-radius: 100%;
+	transition: all 0.5s ease-in-out;
+	position: relative;
+	overflow: hidden;
+}
+
+.button:before {
+	content: "";
+	background-color: rgba(255, 255, 255, 0.5);
+	height: 100%;
+	width: 30px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -4.5em;
+	transform: skewX(-45deg) translateX(0);
+	transition: none;
+}
+.button:hover {
+	/* background-color: #2194e0; */
+	color: #fff;
+	/* border-bottom: 4px solid darken(#2194e0, 10%); */
+}
+.button:hover:before {
+	transform: skewX(-45deg) translateX(13.5em);
+	transition: all 0.5s ease-in-out;
+}
